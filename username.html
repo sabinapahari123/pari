@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="">
+<label for="username">Username</label>
+<input type="text" id="username" placeholder="Enter user name">
+<input type="submit" value="Click Me " onclick="Username()">
+<br><br>
+
+<label for="password">Password</label>
+<input type="text" id="password"placeholder="Enter password">
+<input type="submit" value="Click Me " onclick="Password()">
+<br><br>
+
+<label for="address">Address</label>
+<input type="text" id="address"placeholder="Enter address">
+<input type="submit" value="Click Me " onclick="Address()">
+<br><br>
+
+<label for="email">Email</label>
+<input type="text" id="email"placeholder="Enter email">
+<input type="submit" value="Click Me " onclick="Email()">
+<br><br>
+
+<label for="phone">Phone</label>
+<input type="text" id="phone"placeholder="Enter phone">
+<input type="submit" value="Click Me " onclick="Phone()">
+<br><br>
+
+<label for="name">Name</label>
+<input type="text" id="name"placeholder="Enter name">
+<input type="submit" value="Click Me " onclick="Name()">
+<br><br>
+
+
+<label for="age">Age</label>
+<input type="text" id="age"placeholder="Enter age">
+<input type="submit" value="Click Me " onclick="Age()">
+<br><br>
+</form>
+  
+<script>
+    function Username () {
+        var username = document.getElementById("username").value;
+        if (!username.match(/[a-z]/)) {
+            alert("Enter username first")
+
+        }
+        else if(!username.match(/[0-9]+/)){
+            alert("atleast one num")
+        }
+
+        else {
+        // //      alert("valid username")
+          }
+    }
+
+
+
+    function Password () {
+        var password = document.getElementById("password").value;
+        if (!password.match(/[a-z]/)) {
+            alert("Enter password")
+
+        }
+        else if(!password.match(/[0-9]+/)){
+            alert("atleast one num")
+        }
+
+        else {
+        // //      alert("valid password")
+          }
+    }
+
+
+    function Address () {
+        var address = document.getElementById("address").value;
+        if (!address.match(/^[a-z]+/)) {
+            alert("Enter address")
+
+         }
+        // else if(!username.match(/[0-9]+/)){
+        //     alert("atleast one num")
+        // }
+
+        // else {
+        // // //      alert("valid username")
+        //   }
+    }
+
+
+    function Email () {
+        var email = document.getElementById("email").value;
+        if (!email.match(/^[a-z]+/)) {
+            alert("Enter email")
+
+         }
+        else if(!email.match(/[[a-z][a-z0-9]+[@](gmail)[.](com)[.](np)$]/)) {
+alert("must have @")
+        }
+
+
+         else {
+        // // //      alert("valid username")
+           }
+    }
+
+
+
+    function Phone () {
+        var phone = document.getElementById("phone").value;
+        if (!phone.match(/^[a-z]+/)) {
+            alert("only num")
+
+         }
+         else if(phone.match(/[0-9]/)){
+            alert("atleast ten num")
+         }
+
+        // else {
+        // // //      alert("valid username")
+        //   }
+    }
+
+
+    function Name () {
+        var name = document.getElementById("name").value;
+        if (!name.match(/[a-z]/)) {
+            alert("Enter name first")
+
+ 
+    }
+}
+
+
+
+function Age () {
+        var age = document.getElementById("age").value;
+        if (!age.match(/^[0-9]+$/)) {
+            alert("Enter the age")
+
+        }
+        else if((age <18)){
+            alert("must be 18")
+        }
+        else {
+        // //      alert("valid username")
+          }
+    }
+
+</script>
+  
+  
+  
+  
+ 
+</body>
+</html>

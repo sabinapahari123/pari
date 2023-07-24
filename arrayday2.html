@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//array
+let num = [25, 69, 58, 89, 60]
+console.log(typeof num,num)
+
+console.log( "priniting process of arry index",num[2])
+
+
+let i =0;
+for ( i =0; i < num.length; i++) {
+
+    console.log(num[i])
+}
+//multi dimension array=>array within array called multidimension array in javascript
+
+ let NUMBER = [
+[4,5,6,7,8,9,],
+[84,89,98,78,56,69],
+[52,56,85,96,63,96]
+ ];
+console.log(NUMBER)
+console.log(NUMBER[2][2])
+
+
+
+
+//methods in array 1. length
+let n =num.length;
+console.log( "length of an array", n)
+
+
+//pop
+let arr =[1,2,3,4,5]
+console.log(arr)
+arr.pop();
+console.log(arr)
+
+
+//push
+let pu =[6,7,8,9,10]
+console.log(pu)
+pu.push(78);
+console.log(pu)
+
+//join
+let p = num.join("&")
+console.log(p) 
+
+//String to methods
+let h= num.toString();
+console.log(typeof h)
+console.log(h)
+
+
+//delete
+delete num[3]
+console.log(num)
+
+console.groupCollapsed(num.length)
+
+// SHIFT method in array javascript
+let m =numnum.shift();
+console.log(num)
+console.log(m)
+
+
+let o= num.shift();
+console.log(num)
+console.log(0)
+
+
+
+
+
+
+    </script>
+</body>
+</html>

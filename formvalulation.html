@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="form-control" onkeyup="Username_validation()">
+        <span id="error_username"></span>
+        <br>
+        <br>
+
+        <label for="phone">phone</label>
+        <input type="text" id="phone" class="form-control" onkeyup="phone_validation()">
+        <span id="error_phone"></span>
+        <br>
+        <br>
+
+        <label for="address">Address</label>
+        <input type="text" id="address" class="form-control" onkeyup="address_validation()">
+        <span id="error_address"></span>
+        <br>
+        <br>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" class="form-control" onkeyup="email_validation()">
+        <span id="error_email"></span>
+        <br>
+        <br>
+
+
+        <label for="password">Password</label>
+        <input type="text" id="password" class="form-control" onkeyup="password_validation()">
+        <span id="error_password"></span>
+        <br>
+        <br>
+
+        <label for="sub">Sub</label>
+        <input type="text" id="sub" class="form-control" onkeyup="sub_validation()">
+        <span id="error_sub"></span>
+        <br>
+        <br>
+
+        <label for="age">Age</label>
+        <input type="text" id="age" class="form-control" onkeyup="age_validation()">
+        <span id="error_age"></span>
+        <br>
+        <br>
+
+        <button type="button" class="btn">log in</button>
+    </form>
+
+
+        <script>
+
+
+
+
+function age_validation() {
+            var age = document.getElementById("age").value;
+            if (age.match(/^[0-9]+$/)){
+                displayMsg("error_age", "age must be star with alpha", "red")   
+            }
+
+            else if (age.length < 18 ) {
+                displayMsg("error_age", "age have at least 5", 'green')
+            }
+
+            else if (age >70){
+                displayMsg("error_age", "invalid age", 'green')
+            }
+
+            else{
+                displayMsg("error age", 'valid age', 'green' )
+            }
+        }
+
+
+
+
+function sub_validation() {
+            var sub = document.getElementById("sub").value;
+            if (sub.match(/^[0-9]+/)){
+                displayMsg("error_sub", "sub must be star with alpha", "red")   
+            }
+
+            else if (sub.length < 6) {
+                displayMsg("error_sub", "sub have at least 5", 'green')
+            }
+
+            else {
+                displayMsg("error_sub", "Valid", 'green')
+            }
+        }
+
+            function email_validation() {
+                var email = document.getElementById("email").value;
+                if (!email.match(/^[a-z][a-z]+[0-9]+[@](gmail)[.](com)/)) {
+                    displayMsg("error_email", "invalid email", "red")
+
+                }
+                else {
+                    displayMsg("error_email", "valid email", "green")
+
+                }
+
+            }
+
+        function address_validation(){
+            var address = document.getElementById("address").value;
+            if (address.match(/^[0-9]+/)){
+                displayMsg("error_address", "address must be star with alpha", "red")
+            }
+
+            else {
+                displayMsg("error_address", "valid", "blue")
+            }
+        }
+
+            function Username_validation() {
+
+                var username = document.getElementById("username").value;
+                // document.write(Username)
+
+                if (!username.match(/^[A-Z]+/)) {
+                    displayMsg("error_username", "username must be start with alphobet", 'red')
+
+                    //  document.getElementById("error_username").innerHTML = "username must be star with alphobet"
+
+                }
+                else {
+                    displayMsg("error_username", "Valid", 'green')
+
+                    function Username_validation() {
+
+                        var username = document.getElementById("username").value;
+                        // document.write(Username)
+
+                        if (!username.match(/^[A-Z]+/)) {
+                            displayMsg("error_username", "username must be start with alphobet", 'red')
+
+                            //  document.getElementById("error_username").innerHTML = "username must be star with alphobet"
+
+                        }
+                        else {
+                            displayMsg("error_username", "valid", 'green')
+
+                        }
+                        // else if (username.length<6){
+                        //     displayMsg("error_username", "User name have at least ")
+                        // }
+
+                    }
+                }
+                // else if (username.length<6){
+                //     displayMsg("error_username", "User name have at least ")
+                // }
+
+            }
+
+            function phone_validation() {
+
+                var phone = document.getElementById("phone").value;
+                // document.write(phone)
+                if (!phone.matc(/^[+,977]+/)) {
+                    displayMsg("error_phone",  "red")
+                }
+                else if (!phone.match(/^[0-9,+][98]+/)) {
+                    displayMsg("error_phone", "only num", "red")
+                }
+                else if (phone.length < 10) {
+                    displayMsg("error_phone", "at least 10 digit", "red")
+                }
+                else if (phone.length > 14) {
+                    
+                    displayMsg("error_phone", "invalid", "red")
+                }
+                else {
+                    
+                    displayMsg("error_phone", "valid", "blue")
+                }
+                
+                }
+            
+
+
+
+
+
+
+
+            function password_validation() {
+
+                var password = document.getElementById("password").value;
+                // document.write(password)
+
+                if (!password.match(/^[A-Z]+/)) {
+                    displayMsg("error_password", "password must be start with alphobet", 'red')
+
+                    //  document.getElementById("error_password").innerHTML = "password must be star with alphobet"
+
+                }
+                else {
+                    displayMsg("error_password", "Valid", 'green')
+
+                }
+                // else if (password.length<6){
+                //     displayMsg("error_password", "password have at least ")
+                // }
+
+
+
+            }
+            function displayMsg(id, msg, color) {
+                document.getElementById(id).innerHTML = msg;
+                document.getElementById(id).style.color = color;
+            }
+
+        </script>
+
+</body>
+
+</html>
